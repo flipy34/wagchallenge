@@ -1,6 +1,7 @@
 package com.wag.challenge;
 
 import android.app.Application;
+import android.os.StrictMode;
 
 import com.wag.challenge.interfaces.ChallengeApi;
 import com.wag.challenge.service.ImageCacheService;
@@ -26,6 +27,15 @@ public class WagChallengeApp extends Application implements ChallengeApi {
         imageCache = new ImageCacheService(this);
         networkService = new NetworkService(this, imageCache);
         userManagerService = new UserManagerService(this, networkService);
+
+
+        if (BuildConfig.DEBUG) {
+            StrictMode.setThreadPolicy(new StrictMode.ThreadPolicy.Builder()
+                    .detectAll()
+                    .penaltyLog()
+                    .build());
+        }
+
     }
 
     @Override

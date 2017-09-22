@@ -12,6 +12,7 @@ import com.wag.challenge.util.LogCatLogger;
 
 import java.io.File;
 import java.io.FileOutputStream;
+import java.io.IOException;
 import java.io.OutputStream;
 
 /**
@@ -54,7 +55,7 @@ public class ImageCacheService {
         if(bitmapFile.exists()) {
             bitmapFile.delete();
         }
-        OutputStream out;
+        OutputStream out = null;
         try {
             out = new FileOutputStream(bitmapFile);
             bitmap.compress(Bitmap.CompressFormat.JPEG, 100, out);
@@ -62,6 +63,15 @@ public class ImageCacheService {
             return true;
         }catch (Exception e) {
             LogCatLogger.error(TAG, e);
+        }
+        finally {
+            if(out != null) {
+                try {
+                    out.close();
+                } catch (IOException e) {
+                    LogCatLogger.error(TAG, e);
+                }
+            }
         }
         return false;
     }

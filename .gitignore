@@ -53,3 +53,30 @@ google-services.json
 freeline.py
 freeline/
 freeline_project_description.json
+
+## generic files to ignore
+*~
+*.lock
+*.DS_Store
+*.swp
+*.out
+
+.gradle/
+build/intermediates
+build/generated
+build/android-profile
+.idea/
+*.iml
+*.ipr
+*.iws
+gradlew.bat
+gradlew
+gradle/
+
+#java specific
+*.class
+
+local.properties
+gradle.properties
+build/intermediates/*
+build/generated/*

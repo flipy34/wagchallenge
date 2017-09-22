@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/WagChallenge.iml" filepath="$PROJECT_DIR$/WagChallenge.iml" />
-      <module fileurl="file://$PROJECT_DIR$/wagchallenge/wagchallenge.iml" filepath="$PROJECT_DIR$/wagchallenge/wagchallenge.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wagchallenge.iml" filepath="$PROJECT_DIR$/wagchallenge.iml" />
+      <module fileurl="file://$PROJECT_DIR$/wagchallenge/wagchallenge-wagchallenge.iml" filepath="$PROJECT_DIR$/wagchallenge/wagchallenge-wagchallenge.iml" />
     </modules>
   </component>
 </project>
